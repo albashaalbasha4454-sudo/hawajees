@@ -1,17 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-
 """
 Hawajees Remix Tool
 
-الغرض:
-- حذف صوت الشاعر فقط من الأوقات التي تحددها.
-- الحفاظ على الأغنية إذا بدأت بعد سكوت الشاعر.
-- إضافة صوتك أنت فوق النغمة.
-- خفض الموسيقى تلقائياً أثناء إلقائك ثم رفعها بعد السكوت.
-
-تنبيه:
-استخدم الأداة فقط مع الملفات التي تملك حق استخدامها.
+Use only with audio you own or have permission to edit.
+The tool processes only the poet time ranges you provide.
+Anything outside those ranges is preserved, so song parts after the poet are not touched.
 """
 
 import argparse
@@ -20,4 +14,5 @@ import subprocess
 from pathlib import Path
 
 
-# التحقق من وجود برنامج
+def need(cmd: str) -> None:
+   
